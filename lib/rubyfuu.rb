@@ -1,4 +1,5 @@
 require 'rubyfuu/version'
+require 'rubyfuu/os'
 
 require 'rubyfuu/file_writer'
 
@@ -12,7 +13,11 @@ require 'tempfile'
 
 module Rubyfuu
   class Builder
-    def initialize(compiler = OSXAssembly32)
+    def initialize(compiler = nil)
+      unless compiler
+        compiler = OS.osx? ? OSXAssembly32 : LinuxAssembly32
+      end
+
       @compiler = compiler
     end
 
