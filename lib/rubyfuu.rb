@@ -4,8 +4,9 @@ require 'rubyfuu/file_writer'
 
 require 'rubyfuu/compiler'
 require 'rubyfuu/assembly'
-require 'rubyfuu/osx_assembly'
+require 'rubyfuu/assembly32'
 require 'rubyfuu/osx_assembly32'
+require 'rubyfuu/linux_assembly32'
 
 require 'tempfile'
 

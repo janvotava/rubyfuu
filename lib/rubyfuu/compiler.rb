@@ -24,13 +24,10 @@ module Rubyfuu
       link(compile, outfile)
     end
 
-    def link
-      raise Error::NotImplemented
-    end
-
     def compile
       header
       while c = @readable.getc
+        c = c.chr
         if OPERATORS.has_key?(c)
           parse(c)
         end
@@ -41,14 +38,11 @@ module Rubyfuu
     end
 
     def parse(char)
-      public_send method_name(char)
+      send method_name(char)
     end
 
     def method_name(char)
-      OPERATORS.each do |from,to|
-        char.gsub!(from, to) if to
-      end
-      char
+      OPERATORS[char] || char
     end
   end
 end

@@ -1,7 +1,7 @@
 # Rubyfuu
 
 Ruby compiler for Brainfuck programming language. Currently implemented only to
-generate 32bit OSX binaries.
+generate 32bit Linux / OSX binaries.
 
 ## Installation
 

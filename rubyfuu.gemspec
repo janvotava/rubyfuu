@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jan Votava"]
   spec.email         = ["votava@deployment.cz"]
   spec.summary       = %q{Brainfuck compiler written in Ruby}
-  spec.description   = %q{Brainfuck compiler written in Ruby - highly experimental and for fun}
+  spec.description   = %q{Brainfuck compiler written in Ruby - highly serious project}
   spec.homepage      = "http://github.com/cyner/rubyfuu"
   spec.license       = "MIT"
 
