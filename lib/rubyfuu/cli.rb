@@ -15,6 +15,11 @@ module Rubyfuu
       with_rescue { builder.run(path) }
     end
 
+    desc "version", "Show Rubyfuu version"
+    def version
+      puts "Rubyfuu #{VERSION}"
+    end
+
     private
     def with_rescue(&block)
       yield
